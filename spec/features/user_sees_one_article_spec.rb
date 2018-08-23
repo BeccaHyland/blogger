@@ -1,0 +1,16 @@
+require "rails-helper"
+
+describe "user sees one article" do
+  describe "they link from the articles index" do
+    it "displays information for one article" do
+      article = Article.create!(title: "Unicorns Article", body: "There are many reasons why unicorns make the world a better place.")
+
+      visit articles_path
+      
+      click_on article.title
+
+      expect(page).to have_content(article.title)
+      expect(page).to have_content(article.body)
+    end
+  end
+end
