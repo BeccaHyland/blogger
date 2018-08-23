@@ -7,6 +7,8 @@ describe "user sees all articles" do
       article_2 = Article.create!(title: "Title 2", body: "Body 2")
 
       visit '/articles'
+      save_and_open_page
+      
       expect(page).to have_content(article_1.title)
       expect(page).to have_content(article_2.title)
     end
