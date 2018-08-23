@@ -1,4 +1,4 @@
-require 'rails-helper'
+require 'rails_helper'
 
 describe "user sees all articles" do
   describe "they visit /articles" do
