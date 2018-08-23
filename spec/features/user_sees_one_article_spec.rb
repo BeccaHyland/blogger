@@ -6,6 +6,7 @@ describe "user sees one article" do
       article = Article.create!(title: "Unicorns Article", body: "There are many reasons why unicorns make the world a better place.")
 
       visit articles_path
+      save_and_open_page
 
       click_link article.title
 
