@@ -8,7 +8,6 @@ describe "user deletes an article" do
 
       visit article_path(article_1)
       click_link "delete"
-      save_and_open_page
 
       expect(current_path).to eq(articles_path)
       expect(page).to have_content(article_2.title)
